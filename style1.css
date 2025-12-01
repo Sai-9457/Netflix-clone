@@ -1,0 +1,531 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+body {
+    background-color: #000;
+    color: #fff;
+}
+
+
+.heading {
+    width: 100%;
+    min-height: 100vh;
+    background:
+        linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.8) 0%,
+            rgba(0, 0, 0, 0.2) 60%,
+            rgba(0, 0, 0, 0.9) 100%
+        ),
+        url("photos/background-image.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    padding: 20px 120px;
+    color: white;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-logo {
+    display: flex;
+    height: 80px;
+}
+
+.logo {
+    background-image: url("photos/Netflix-logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 80px;
+    width: 200px;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+
+.lang-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid #ffffff80;
+    padding: 6px 12px;
+    border-radius: 4px;
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+}
+
+.lang-select {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.lang-select option {
+    color: black;
+}
+
+.signin-btn {
+    background-color: #e50914;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+
+.hero-content {
+    text-align: center;
+    margin-top: 140px;
+}
+
+.one {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 6px;
+}
+
+.two {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 16px;
+}
+
+.hero-content h4 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 35px;
+}
+
+.hero-content p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.hero-form {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.hero-form input {
+    min-width: 280px;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 4px;
+    border: 1px solid #ffffff80;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+}
+
+.hero-form button {
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #e50914;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.partion {
+    border-top: 5px solid #e50914;
+    border-radius: 50%;
+    margin-top: 40px;
+}
+
+
+.trending {
+    font-size: 32px;
+    margin-bottom: 24px;
+    margin-top: 20px;
+    background-color: black;
+    color: white;
+    text-align: left;
+}
+
+.trend {
+    margin-left: 40px;
+    padding: 0 16px;
+}
+
+.movie-row {
+    display: flex;
+    gap: 18px;
+    overflow-x: scroll;
+    overflow-y: visible;         
+    scroll-behavior: smooth;
+    padding-bottom: 20px;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    padding-left: 16px;
+    padding-right: 16px;
+    
+}
+
+.movie-row::-webkit-scrollbar {
+    display: none;
+}
+
+.movie {
+    position: relative;
+    min-width: 180px;
+    height: 260px;
+    border-radius: 8px;
+    overflow: hidden;
+    flex-shrink: 0;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.movie img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.movie:hover {
+    transform: scale(1.15);
+    z-index: 10;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.movie:hover img {
+    filter: brightness(1.2);
+}
+
+.rank {
+    position: absolute;
+    bottom: -10px;
+    left: -10px;
+    font-size: 90px;
+    font-weight: 700;
+    color: black;
+    -webkit-text-stroke: 3px white;
+    opacity: 0.9;
+    pointer-events: none;
+}
+
+
+.netfilx_reason {
+    background-color: #000;
+    color: #fff;
+    padding: 60px 60px 80px;
+}
+
+.reason {
+    font-size: 40px;
+    margin-bottom: 24px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.about {
+    flex: 1 1 220px;
+    max-width: 280px;
+    background: linear-gradient(180deg, #1b2a58 0%, #200018 100%);
+    border-radius: 22px;
+    padding: 24px;
+    min-height: 260px;
+    position: relative;
+    overflow: hidden;
+    margin-top: 12px;
+}
+
+.about h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.info {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #bcb5b5d8;
+    margin-top: 25px;
+}
+
+
+.faq-section {
+    max-width: 1180px;
+    margin: 40px auto;
+    padding: 0 16px;
+    color: white;
+}
+
+.faq-section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.faq-item {
+    margin-bottom: 4px;
+}
+
+.faq-question {
+    width: 100%;
+    background: #2d2d2d;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    padding: 20px;
+    font-size: 20px;
+    margin-top: 2px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-icon {
+    font-size: 28px;
+    font-weight: 100;
+    transition: transform 0.2s ease;
+}
+
+
+.faq-answer {
+    background: #2d2d2d;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 20px;
+    transition: max-height 0.3s ease;
+    border-top: 1px solid #000;
+}
+
+.faq-answer p {
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+
+.faq-item.active .faq-answer {
+    max-height: 500px;
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(45deg);
+}
+
+
+.footer {
+    background-color: #000;
+    color: white;
+    padding: 40px 0 50px;
+    font-size: 15px;
+}
+
+.footer-inner {
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.footer-top {
+    margin-bottom: 20px;
+}
+
+.footer-top a {
+    color: white;
+    text-decoration: underline;
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(120px, 1fr));
+    gap: 16px 40px;
+    margin-bottom: 30px;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: underline;
+}
+
+.footer-lang {
+    margin-bottom: 20px;
+}
+
+.footer-country {
+    margin-bottom: 10px;
+}
+
+.footer-note {
+    font-size: 12px;
+}
+
+.footer-note a {
+    color: #0080ff;
+    text-decoration: underline;
+}
+
+
+@media (max-width: 600px) {
+
+    .heading {
+        padding: 16px;
+    }
+
+    .navbar {
+        justify-content: space-between;
+        gap: 8px;
+    }
+
+    .logo {
+        width: 120px;
+        height: 50px;
+    }
+
+    .nav-right {
+        gap: 8px;
+    }
+
+    .signin-btn {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+
+    .hero-content {
+        margin-top: 70px;
+    }
+
+    .one,
+    .two {
+        font-size: 1.8rem;
+    }
+
+    .hero-content h4 {
+        font-size: 1.1rem;
+    }
+
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+
+    .hero-form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-form input,
+    .hero-form button {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .movie-row {
+        gap: 12px;
+        padding: 0 16px 20px;
+    }
+
+    .movie {
+        min-width: 140px;
+        height: 210px;
+    }
+
+    .netfilx_reason {
+        padding: 40px 16px 60px;
+    }
+
+    .reason {
+        font-size: 28px;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .about {
+        max-width: 100%;
+    }
+
+    .faq-question {
+        font-size: 18px;
+        padding: 16px;
+    }
+
+    .faq-answer p {
+        font-size: 16px;
+    }
+
+    .footer-inner {
+        padding: 0 16px;
+    }
+
+    .footer-links {
+        grid-template-columns: repeat(2, minmax(120px, 1fr));
+    }
+}
+
+/* Tablets / small laptops: 601px–900px */
+@media (min-width: 601px) and (max-width: 900px) {
+
+    .heading {
+        padding: 20px 32px;
+    }
+
+    .hero-content {
+        margin-top: 100px;
+    }
+
+    .one,
+    .two {
+        font-size: 2.3rem;
+    }
+
+    .hero-content h4 {
+        font-size: 1.3rem;
+    }
+
+    .netfilx_reason {
+        padding: 50px 32px 70px;
+    }
+
+    .faq-section {
+        max-width: 100%;
+        margin: 40px auto;
+        padding: 0 24px;
+    }
+
+    .footer-inner {
+        padding: 0 24px;
+    }
+
+    .footer-links {
+        grid-template-columns: repeat(3, minmax(120px, 1fr));
+    }
+}
