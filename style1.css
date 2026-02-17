@@ -491,7 +491,7 @@ body {
     }
 }
 
-/* Tablets / small laptops: 601px–900px */
+
 @media (min-width: 601px) and (max-width: 900px) {
 
     .heading {
